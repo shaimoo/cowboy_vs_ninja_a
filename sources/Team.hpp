@@ -1,8 +1,30 @@
-//
-// Created by sm on 5/15/23.
-//
+#ifndef TEAM
+#define TEAM
+#include <vector>
+#include "Character.hpp"
+#include "Ninja.hpp"
+#include "Cowboy.hpp"
 
-#ifndef COWBOY_VS_NINJA_A_MAIN_TEAM_CUH
-#define COWBOY_VS_NINJA_A_MAIN_TEAM_CUH
+using  namespace std;
+namespace ariel{
+    class Team
+    {
+    private:
+        list<Ninja*> Ninjas;
+        list<Cowboy*> Cowboys;
+        Character *lead;
 
-#endif //COWBOY_VS_NINJA_A_MAIN_TEAM_CUH
+    public:
+        Team(Character *lead);
+        virtual ~Team();
+        void add(Character *temp const);
+        void attack(Team *temp const);
+        int stillAlive();
+        void print();
+    };
+
+
+}
+
+
+#endif
