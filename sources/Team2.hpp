@@ -17,7 +17,7 @@ namespace ariel{
     public:
         explicit Team2(Character *lead);
         void add(Character *temp );
-        void attack(Team *temp );
+        void attack(Team2 *temp );
         int stillAlive();
         void print();
     };

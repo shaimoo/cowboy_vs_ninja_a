@@ -5,20 +5,20 @@ using namespace std;
 
 namespace ariel{
 
-    Team::Team2(Character* lead):lead(lead)
+    Team2::Team2(Character* lead):lead(lead)
     {
         this->add(lead);
     }
-    void Team::add(Character *temp){
+    void Team2::add(Character *temp){
 
     }
-    void Team::attack(Team *temp) {
+    void Team2::attack(Team2 *temp) {
         return;
     }
-    int Team::stillAlive() {
+    int Team2::stillAlive() {
         return 0;
     }
-    void Team::print() {
+    void Team2::print() {
         return;
     }
 }

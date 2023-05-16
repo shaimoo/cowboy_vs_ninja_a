@@ -25,7 +25,7 @@ namespace ariel{
         // get x,y
         double getx();
         double gety();
-
+        bool operator==(const Point &temp)const;
 
     };
 

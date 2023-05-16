@@ -35,5 +35,8 @@ namespace ariel{
 
       return Point(0,0);
     }
+    bool Point::operator==(const ariel::Point &temp) const {
+        return temp.x == x && temp.y==y;
+    }
 
 }
