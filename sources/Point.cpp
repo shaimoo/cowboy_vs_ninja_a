@@ -33,7 +33,7 @@ namespace ariel{
 
     Point Point::moveTowards(const ariel::Point &source, const ariel::Point &destination, double dist) {
 
-      return;
+      return Point(0,0);
     }
 
 }

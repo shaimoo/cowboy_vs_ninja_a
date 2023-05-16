@@ -1,16 +1,18 @@
 #include "Character.hpp"
-
+#include <string>
 using namespace std;
 
 namespace ariel{
 
     // constructors
     Character::Character(string name, int point_life, Point location):name(name),point_life(point_life), location(location) {}
-    Character::~Character() {}
 
-    double Character::distance(const Character &temp){}
 
-    bool Character::isAlive() {}
+    double Character::distance(const Character &temp){return 0;}
+
+    bool Character::isAlive() {
+        return false;
+    }
 
     void Character::hit(int attack) {}
 
@@ -19,14 +21,14 @@ namespace ariel{
         this->location = temp;
     }
 
-    void Character::set_name(int name)
+    void Character::set_name(string name_)
     {
-        this->name = name;
+        this->name = name_;
     }
 
-    void Character::set_point_life(int point_life)
+    void Character::set_point_life(int point_life_)
     {
-        this->point_life = point_life;
+        this->point_life = point_life_;
     }
 
     string Character::get_name()

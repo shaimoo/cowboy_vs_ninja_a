@@ -11,11 +11,11 @@ namespace ariel{
         int speed;
 
     public:
-         Ninja(string name,int point_of_life, Point location , int speed);
-         ~Ninja() override;
+         Ninja(string name,int point_of_life, Point location , int speed): Character(name,point_of_life,location),speed(speed){}
 
-         virtual void move(const Character &enemy);
-         virtual void slash(const Character &enemy);
+         virtual void move(Character* enemy);
+         virtual void slash(Character* enemy);
+         string print() override;
          int get_speed();
     };
     class YoungNinja:public Ninja
@@ -29,7 +29,8 @@ namespace ariel{
     public:
         TrainedNinja(string name, Point location);
     };
-    class OldNinja :public Ninja
+
+    class OldNinja:public Ninja
     {
     public:
         OldNinja(string name, Point location);

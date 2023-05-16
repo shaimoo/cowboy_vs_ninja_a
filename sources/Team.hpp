@@ -10,15 +10,14 @@ namespace ariel{
     class Team
     {
     private:
-        list<Ninja*> Ninjas;
-        list<Cowboy*> Cowboys;
+        vector<Ninja*> Ninjas;
+        vector<Cowboy*> Cowboys;
         Character *lead;
 
     public:
-        Team(Character *lead);
-        virtual ~Team();
-        void add(Character *temp const);
-        void attack(Team *temp const);
+        explicit Team(Character *lead);
+        void add(Character *temp );
+        void attack(Team *temp );
         int stillAlive();
         void print();
     };

@@ -18,19 +18,17 @@ namespace ariel{
 
         public:
             Character(string name ,int point_life ,Point location);
-            virtual ~Character();
 
             virtual bool isAlive() ;
             virtual  void hit(int attack) ;
             virtual double distance(const Character &temp) ;
-            virtual string print() = 0;
-            virtual void attack(Character* other) = 0;
+            virtual string print()=0;
 
             //get func
             int get_point_life();
             string get_name();
             Point get_location();
-
+            virtual ~Character()=default;
 
     };
 
